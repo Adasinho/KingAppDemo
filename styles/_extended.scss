@@ -1,0 +1,258 @@
+@import 'sidebar';
+@import 'variables';
+@import 'baner';
+
+.extended {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: $screen-md) {
+    .extended {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+    }
+}
+
+@media (min-width: $screen-xl) {
+    .extended {
+        grid-template-columns: 1fr 1000px 1fr;
+    }
+}
+
+.product-frontend-feature-stock {
+    .page-content {
+        padding: 10px 0;
+    }
+
+    h4 {
+        font-size: 1.8em;
+        color: red;
+        margin: 10px 0;
+
+        br {
+            display: none;
+        }
+    }
+
+    h1 {
+        color: red;
+        font-size: 2.6em;
+        margin: 10px 0;
+    }
+
+    .page-frontend-external-link {
+        margin: 10px auto;
+        position: relative;
+        z-index: 5;
+    }
+
+    @media (min-width: $screen-md) {
+        .page-frontend-external-link {
+            margin: 10px 0;
+        }
+
+        h1 {
+            font-size: 5em;
+        }
+    }
+
+    .bx-viewport {
+        height: auto !important;
+
+        .page-frontend-listing-item {
+            .widget-inner {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-md) {
+    .product-frontend-feature-stock {
+        text-align: left;
+    }
+
+    br {
+        display: block !important;
+    }
+}
+
+.page-frontend-listing {
+    .listing {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .image {
+        height: 220px;
+    }
+
+    @media (min-width: $screen-md) {
+        .image {
+            height: 300px;
+        }
+    }
+
+    @media (min-width: $screen-lg) {
+        .listing {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    img {
+        //padding: 10px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    a {
+        color: white;
+        font-size: 1em;
+        text-transform: uppercase;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .page-frontend-external-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .widget-inner {
+        position: relative;
+    }
+
+    .page-frontend-listing-item {
+        padding: 10px;
+    }
+}
+
+.tab-content {
+    h3 {
+        display: none;
+    }
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+
+    .page-frontend-listing-item {
+        max-width: 250px;
+        width: 1000px !important;
+        //width: 250px;
+
+        img {
+            width: 100%;
+            padding: 10px;
+        }
+    }
+
+    .bx-viewport {
+        height: auto !important;
+
+        .page-frontend-listing-item {
+            .widget-inner {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    .bx-pager {
+        display: none;
+    }
+
+    .bx-wrapper {
+        position: relative;
+    }
+
+    .bx-controls {
+        .bx-controls-direction {
+            a {
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                display: block;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            @mixin bx-arrow {
+                height: 34px;
+                width: 34px;
+                display: block;
+                background-image: url('./../img/arrow.png');
+                background-repeat: no-repeat;
+                background-color: white;
+                border-radius: 5px;
+                text-indent: 10000px;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            a.bx-prev {
+                @include bx-arrow;
+                left: 10px;
+            }
+
+            a.bx-next {
+                @include bx-arrow;
+                right: 10px;
+                transform: rotate(180deg) translateY(50%);
+            }
+
+            @media (min-width: $screen-xl) {
+                a.bx-prev {
+                    left: -30px;
+                }
+
+                a.bx-next {
+                    right: -30px;
+                }
+            }
+        }
+    }
+
+    
+}
+
+h2 {
+    display: block !important;
+    margin: 0 10px;
+    font-size: .9em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+.page-frontend-context {
+    text-align: center;
+}
+
+.page-frontend-link {
+    @include button;
+    margin: 0 auto;
+}
+
+.page-frontend-grid {
+    padding: 40px 0;
+}
+
+.tabs-plain {
+    li.active {
+        font-weight: 700;
+    }
+}

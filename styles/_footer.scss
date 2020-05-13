@@ -1,0 +1,240 @@
+@import 'checkbox';
+@import 'variables';
+
+footer {
+    background-color: #444343;
+    color: white;
+    font-size: .8em;
+
+    a {
+        color: white;
+    }
+
+    ul {
+        padding: 0;
+
+        li {
+            ul {
+                padding: 0;
+                display: block;
+
+                li {
+                    font-size: .9em;
+                }
+            }
+        }
+    }
+
+    .page-frontend-grid {
+        padding-top: 0px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        &:first-child {
+            padding-top: 20px;
+
+            ul {
+                flex-direction: column;
+
+                li {
+                    padding: 10px 0;
+                    font-weight: 700;;
+                    ul {
+                        li {
+                            padding: 0;
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+
+            @media (min-width: $screen-md) {
+                ul {
+                    flex-direction: row;
+
+                    li {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            .widget-inner {
+                display: flex !important;
+                justify-content: space-between;
+                align-items: baseline;
+                padding-bottom: 20px;
+                border-bottom: 2px solid white;
+            }
+        }
+
+        &:nth-child(4) {
+            background-color: #242323;
+        }
+    }
+
+    .page-frontend-menu {
+        border-bottom: 2px solid white;
+    }
+
+    .social-frontend-contact {
+        a {
+            margin: 0 20px;
+        }
+    }
+
+    .social-frontend-contact {
+        a {
+            display: block;
+            width: 56px;
+            height: 56px;
+            margin-left: 15px;
+        }
+    
+        span {
+            display: none;
+        }
+    }
+
+    a.facebook {
+        background: url(./../img/facebook_white.png) no-repeat;
+    }
+
+    a.instagram {
+        background: url(./../img/instagram_white.png) no-repeat;
+    }
+
+    a.youtube {
+        background: url(./../img/twitter_white.png) no-repeat;
+    }
+}
+
+.newsletter_grid {
+    form {
+        word-wrap: break-word;
+
+        &::before {
+            content: "Newsletter";
+            font-size: 1em;
+            font-weight: 500;
+        }
+
+        .box {
+            width: 100%;
+        }
+
+        button {
+            background-color: $primary-color;
+            color: white;
+            text-decoration: none;
+            border: none;
+            padding: 15px 30px;
+            display: block;
+            margin: 10px 0 10px auto;
+        }
+    }
+
+    @media (min-width: $screen-md) {
+        form {
+            max-width: 400px;
+        }
+    }
+}
+
+.newsletter_email {
+    input {
+        width: 100%;
+        font-size: .5em;
+        padding: 10px 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+    }
+
+    label {
+        display: none;
+    }
+}
+
+.newsletter_agreeNewsletter {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 25px;
+
+    input {
+        @include checkbox;
+    }
+}
+
+.form-text {
+    display: none;
+}
+
+.common-frontend {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+
+    .page_copyright {
+        &::before {
+            content: 'Wszelkie prawa zastrzeżone. ';
+        }
+    }
+
+    .page-foot__logo {
+        display: flex;
+        height: 100%;
+        align-items: center;
+
+        a {
+            height: 100%;
+
+            img {
+                padding-left: 20px;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.page-frontend-cookie {
+    background-color: rgba($color: #242323, $alpha: .7);
+    color: white;
+    font-size: .6em;
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+}
+
+.client-frontend-owner-info {
+    display: flex;
+    flex-direction: column;
+
+    .tr-street {
+        span {
+            &:first-child {
+                display: none;
+            }
+        }   
+    }
+
+    .company_email {
+        &::before {
+            padding-left: 3px;
+            content: ' Email: ';
+        }
+    }
+
+    .company_phone {
+        &::before {
+            padding-left: 3px;
+            content: ' Tel.: ';
+        }
+    }
+
+    span {
+        line-height: 1.4;
+    }
+}
